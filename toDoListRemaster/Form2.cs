@@ -11,7 +11,7 @@ namespace toDoListRemaster
             ttTextBoxes.SetToolTip(tbNoteName, "Název poznámky");
             ttTextBoxes.SetToolTip(rtbNote, "Poznámka");
         }
-        public string NoteNameText
+        public string NoteNameText //name
         {
             get
             {
@@ -22,7 +22,7 @@ namespace toDoListRemaster
                 tbNoteName.Text = value;
             }
         }
-        public string NoteText
+        public string NoteText //text
         {
             get
             {
