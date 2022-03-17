@@ -100,22 +100,29 @@ namespace toDoListRemaster
         private void bLoad_Click(object sender, EventArgs e) //nacteni vybrane poznamky
         {
             int index = lbNotes.SelectedIndex;
-            string notes = (string)lbNotes.Items[index];
-            string[] splitNotes = notes.Split('/');
-            
-            Form2 f2 = new Form2();
-            f2.NoteNameText = splitNotes[0];
-            f2.NoteText = splitNotes[1];
-            
-            f2.ShowDialog();
-
-            if (f2.NoteText == string.Empty || f2.NoteNameText == string.Empty)
+            if (index == 0)
             {
+                MessageBox.Show(":)", ":)", MessageBoxButtons.OK, MessageBoxIcon.Information); //:)
             }
+            //uprava na vybrane polozce
             else
             {
-                lbNotes.Items.RemoveAt(index);
-                lbNotes.Items.Add(f2.NoteNameText + " / " + Environment.NewLine + Environment.NewLine + f2.NoteText + " / " + Environment.NewLine + Environment.NewLine + DateTime.Now);
+                string notes = (string)lbNotes.Items[index];
+                string[] splitNotes = notes.Split('/');
+
+                Form2 f2 = new Form2();
+                f2.NoteNameText = splitNotes[0];
+                f2.NoteText = splitNotes[1];
+
+                f2.ShowDialog();
+
+                if (f2.NoteText == string.Empty || f2.NoteNameText == string.Empty)
+                {
+                }
+                else
+                {
+                    lbNotes.Items[index] = f2.NoteNameText + " / " + Environment.NewLine + Environment.NewLine + f2.NoteText + " / " + Environment.NewLine + Environment.NewLine + DateTime.Now; ;
+                }
             }
         }
 
@@ -123,7 +130,7 @@ namespace toDoListRemaster
         {
             if (lbNotes.SelectedIndex == 0)
             {
-                MessageBox.Show(":)", ":)", MessageBoxButtons.OK); //nesmazatelny smajlik / opatreni proti padu
+                MessageBox.Show(":)", ":)", MessageBoxButtons.OK); //:)
             }
             else
             {
@@ -175,19 +182,19 @@ namespace toDoListRemaster
             {
                 //prevence pred zobrazenim msgBoxu s min. vyskou / sirkou
             }
-            else if (this.Width < 1119)
+            else if (this.Width < 500)
             {
                 tClock.Enabled = false;
                 MessageBox.Show("Minimální šířka dosažena!", "WARN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                this.Width = 1120;
+                //this.Width = 1120;
                 lTime.Text = time;
                 tClock.Enabled = true;
             }
-            else if (this.Height < 759)
+            else if (this.Height < 720)
             {
                 tClock.Enabled = false;
                 MessageBox.Show("Minimální výška dosažena!", "WARN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                this.Height = 760;
+                //this.Height = 760;
                 lTime.Text = time;
                 tClock.Enabled = true;
             }

@@ -57,11 +57,11 @@ namespace toDoListRemaster
             // 
             // tbNoteName
             // 
-            this.tbNoteName.BackColor = System.Drawing.Color.Gray;
+            this.tbNoteName.BackColor = System.Drawing.Color.White;
             this.tbNoteName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbNoteName.Cursor = System.Windows.Forms.Cursors.Default;
             this.tbNoteName.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.tbNoteName.ForeColor = System.Drawing.Color.White;
+            this.tbNoteName.ForeColor = System.Drawing.Color.Black;
             this.tbNoteName.Location = new System.Drawing.Point(12, 54);
             this.tbNoteName.Name = "tbNoteName";
             this.tbNoteName.Size = new System.Drawing.Size(776, 33);
@@ -69,11 +69,11 @@ namespace toDoListRemaster
             // 
             // rtbNote
             // 
-            this.rtbNote.BackColor = System.Drawing.Color.Gray;
+            this.rtbNote.BackColor = System.Drawing.Color.White;
             this.rtbNote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtbNote.Cursor = System.Windows.Forms.Cursors.Default;
             this.rtbNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rtbNote.ForeColor = System.Drawing.Color.White;
+            this.rtbNote.ForeColor = System.Drawing.Color.Black;
             this.rtbNote.Location = new System.Drawing.Point(12, 158);
             this.rtbNote.Name = "rtbNote";
             this.rtbNote.Size = new System.Drawing.Size(776, 180);
