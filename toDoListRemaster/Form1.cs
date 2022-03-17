@@ -143,7 +143,7 @@ namespace toDoListRemaster
 
         private void bSave_Click(object sender, EventArgs e) //ulozeni
         {
-            try //check jestli lze ulozit
+            try //check - lze ulozit
             {
                 XmlWriterSettings cfg = new XmlWriterSettings();
                 cfg.Encoding = Encoding.UTF8;
