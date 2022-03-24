@@ -93,7 +93,8 @@ namespace toDoListRemaster
             }
             else
             {
-                lbNotes.Items.Add(f2.NoteNameText + " / " + Environment.NewLine + Environment.NewLine + f2.NoteText + " / " + Environment.NewLine + Environment.NewLine + DateTime.Now);
+                lbNotes.Items.Add($"{f2.NoteNameText} / \n\n {f2.NoteText} / \n\n {DateTime.Now}");
+                //lbNotes.Items.Add(f2.NoteNameText + " / " + Environment.NewLine + Environment.NewLine + f2.NoteText + " / " + Environment.NewLine + Environment.NewLine + DateTime.Now);
             }
         }
 
@@ -121,7 +122,8 @@ namespace toDoListRemaster
                 }
                 else
                 {
-                    lbNotes.Items[index] = f2.NoteNameText + " / " + Environment.NewLine + Environment.NewLine + f2.NoteText + " / " + Environment.NewLine + Environment.NewLine + DateTime.Now; ;
+                    lbNotes.Items[index] = $"{f2.NoteNameText} / \n\n {f2.NoteText} / \n\n {DateTime.Now}";
+                    //lbNotes.Items[index] = f2.NoteNameText + " / " + Environment.NewLine + Environment.NewLine + f2.NoteText + " / " + Environment.NewLine + Environment.NewLine + DateTime.Now; ;
                 }
             }
         }
